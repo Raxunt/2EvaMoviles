@@ -80,42 +80,17 @@ public class Registro extends AppCompatActivity {
     firebaseAuth.createUserWithEmailAndPassword(correoUsuario, passwordUsiario).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
         @Override
         public void onComplete(@NonNull Task<AuthResult> task) {
-           /** String id = firebaseAuth.getCurrentUser().getUid();
-            Map<String, Object> map = new HashMap<>();
-            map.put("id", id);
-            map.put("nombre", nombreUsuario);
-            map.put("correo", correoUsuario);
-            map.put("password", passwordUsiario);
-            **/
             FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
             String uid = currentUser.getUid();
 
             DatabaseReference userRef = FirebaseDatabase.getInstance().getReference().child("usuarios").child(uid);
             userRef.setValue(new Usuario(nombreUsuario, correoUsuario, passwordUsiario));
-            //usuarioRef=FirebaseDatabase.getInstance().getReference("usuarios");
-            //Usuario u = new Usuario(nombreUsuario, correoUsuario, passwordUsiario );
-
-            //usuarioRef.push().setValue(u);
             Toast.makeText(Registro.this, "Registro correcto", Toast.LENGTH_SHORT).show();
             finish();
             startActivity(new Intent(Registro.this, Agenda.class));
 
 
-            //firebaseFirestore.collection("usuario").document(id).set(map).addOnSuccessListener(new OnSuccessListener<Void>() {
-            //    @Override
-            //    public void onSuccess(Void unused) {
-            //        finish();
-            //        startActivity(new Intent(Registro.this, Agenda.class));
-            //        Toast.makeText(Registro.this, "Usuario registrado con exito", Toast.LENGTH_SHORT).show();
-                }
-           // }).addOnFailureListener(new OnFailureListener() {
-           //     @Override
-           //     public void onFailure(@NonNull Exception e) {
-           //         Toast.makeText(Registro.this, "Error al guardar el usuario", Toast.LENGTH_SHORT).show();
-
-           //     }
-          //  });
-        //}
+        }
     }).addOnFailureListener(new OnFailureListener() {
         @Override
         public void onFailure(@NonNull Exception e) {

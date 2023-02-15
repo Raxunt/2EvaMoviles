@@ -68,6 +68,13 @@ public class NuevoContacto extends AppCompatActivity {
         });
     }
 
+    /**
+     * Inserta los datos de un nuevo contacto en la base de datos.
+     * @param nombreContacto recoge un String que se asignará al nombre del contacto.
+     * @param direccionContacto recoge un String que se asignará a la dirección del contacto.
+     * @param correoContancto recoge un String que se asignará al correo del contacto.
+     * @param telefonoContacto recoge un String que se asignará al teléfono del contacto.
+     */
     private void nuevoContacto(String nombreContacto, String direccionContacto, String correoContancto, String telefonoContacto) {
         Contacto contacto = new Contacto();
         contacto.setNombre(nombreContacto);
@@ -97,32 +104,6 @@ public class NuevoContacto extends AppCompatActivity {
             }
         });
 
-
-        /**contactoRef= FirebaseDatabase.getInstance().getReference("usuarios").child("contactos");
-        Contacto c = new Contacto(nombreContacto, direccionContacto, correoContancto, telefonoContacto );
-
-        contactoRef.push().setValue(c);
-        Toast.makeText(NuevoContacto.this, "Contacto creado", Toast.LENGTH_SHORT).show();
-        **/
-       /** Map<String, Object> map = new HashMap<>();
-        map.put("nombre", nombreContacto);
-        map.put("direccion", direccionContacto);
-        map.put("correo", correoContancto);
-        map.put("telefono", telefonoContacto);**/
-
-        /**firebaseFirestore.collection("contacto").add(map).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-            @Override
-            public void onSuccess(DocumentReference documentReference) {
-                Toast.makeText(NuevoContacto.this, "Se creó el contacto con exito", Toast.LENGTH_SHORT).show();
-                finish();
-            }
-        }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                Toast.makeText(NuevoContacto.this, "Error al insertar el contacto", Toast.LENGTH_SHORT).show();
-
-            }
-        });**/
     }
 
     @Override

@@ -24,6 +24,14 @@ public class RecyclerViewConfiguracion {
     private static FirebaseUser usuario;
     private Context context;
     private ContactosAdapter contactosAdapter;
+
+    /**
+     * Método para inflar el RecyclerView.
+     * @param recyclerView recoge el contenedor para alojar los datos de cada contacto.
+     * @param context recoge el contexto alctual permitiendo la actualización continua al modificarse los datos.
+     * @param listaContactos recoge la lista de contactos.
+     * @param listaClaves recoge las claves de cada contacto.
+     */
     public void setConfig(RecyclerView recyclerView, Context context, List<Contacto> listaContactos, List<String> listaClaves){
         firebaseAuth = FirebaseAuth.getInstance();
         usuario = firebaseAuth.getCurrentUser();
@@ -37,6 +45,11 @@ public class RecyclerViewConfiguracion {
     class ContactoItemView extends RecyclerView.ViewHolder{
         private TextView nombre, direccion, correo, telefono;
         private String clave;
+
+        /**
+         * Carga los datos del contacto en el ItemView.
+         * @param parent
+         */
         public ContactoItemView(ViewGroup parent){
             super(LayoutInflater.from(context).inflate(R.layout.activity_vista_contacto, parent, false));
             nombre = itemView.findViewById(R.id.nombre_contacto);
@@ -62,6 +75,12 @@ public class RecyclerViewConfiguracion {
                 }
             });
         }
+
+        /**
+         * Enlace de clave y contacto.
+         * @param contacto recoge a la clase contacto.
+         * @param clave recoge un string que será la clave de cada contacto.
+         */
         public void union(Contacto contacto, String clave){
             nombre.setText(contacto.getNombre());
             direccion.setText(contacto.getDireccion());
@@ -70,9 +89,12 @@ public class RecyclerViewConfiguracion {
             this.clave = clave;
         }
     }
+
+
     class ContactosAdapter extends RecyclerView.Adapter<ContactoItemView>{
     private List<Contacto> listaContactos;
     private List<String> listaClaves;
+
 
         public ContactosAdapter(List<Contacto> listaContactos, List<String> listaClaves) {
             this.listaContactos = listaContactos;

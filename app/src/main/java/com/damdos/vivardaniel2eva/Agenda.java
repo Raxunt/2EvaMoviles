@@ -30,6 +30,10 @@ public class Agenda extends AppCompatActivity {
         this.setTitle("Agenda");
         firebaseAuth = FirebaseAuth.getInstance();
         lista_contactos = findViewById(R.id.listaAgenda);
+
+        /**
+         * Carga los datos de los contactos de la base de datos.
+         */
         new FirebaseDatabaseHelper().listaContactos(new FirebaseDatabaseHelper.DataStatus() {
             @Override
             public void DataIsLoaded(List<Contacto> contactoList, List<String> claves) {
@@ -53,13 +57,6 @@ public class Agenda extends AppCompatActivity {
         });
 
 
-        /**lista_contactos.setLayoutManager(new LinearLayoutManager(this));
-        Query query = firebaseFirestore.collection("contacto");
-        FirestoreRecyclerOptions<Contacto> firestoreRecyclerOptions = new FirestoreRecyclerOptions.Builder<Contacto>().setQuery(query, Contacto.class).build();
-        contactoAdaptador = new ContactoAdaptador(firestoreRecyclerOptions);
-        contactoAdaptador.notifyDataSetChanged();
-        lista_contactos.setAdapter(contactoAdaptador);**/
-
         boton_nuevo_contacto = findViewById(R.id.boton_agregar_contacto);
         boton_nuevo_contacto.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,19 +68,6 @@ public class Agenda extends AppCompatActivity {
 
     }
 
-   /** @Override
-    protected void onStart() {
-        super.onStart();
-         contactoAdaptador.startListening();
-
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-        contactoAdaptador.stopListening();
-
-    }**/
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.activity_menu_agenda, menu);
