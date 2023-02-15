@@ -64,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
                     editor.putBoolean("night", true);
 
                 }
+
                 editor.apply();
             }
         });
