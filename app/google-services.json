@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "19286307315",
+    "project_id": "vivardaniel2eva",
+    "storage_bucket": "vivardaniel2eva.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:19286307315:android:a9c518bfaf8955087ea286",
+        "android_client_info": {
+          "package_name": "com.damdos.vivardaniel2eva"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "19286307315-atc4u06762kt0fhmmpbdv8ru2jfa1lt1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCC1sVI-hP1mYtjTc0_D_DGeUr_AFL62vk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "19286307315-atc4u06762kt0fhmmpbdv8ru2jfa1lt1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

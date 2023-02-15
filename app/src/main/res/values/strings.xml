@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">DVC</string>
+    <string name="titulo">INICIO DE SESIÓN</string>
+    <string name="correo">Correo...</string>
+    <string name="password">Contraseña...</string>
+    <string name="boton_login">ENTRAR</string>
+    <string name="boton_nuevousuario">CREAR NUEVA CUENTA</string>
+    <string name="titulo_registro">REGISTRO NUEVO USUARIO</string>
+    <string name="boton_registrar">REGISTRAR</string>
+    <string name="boton_cancelar">CANCELAR</string>
+    <string name="nombre">Nombre...</string>
+    <string name="boton_agregar_contacto">NUEVO CONTACTO</string>
+    <string name="boton_eliminar_contacto">ELIMINAR CONTACTO</string>
+    <string name="titulo_agenda">AGENDA</string>
+    <string name="boton_guardar_contacto">GUARDAR</string>
+    <string name="nombre_contacto">Nombre...</string>
+    <string name="direccion_contacto">Dirección...</string>
+    <string name="correo_contacto">Correo...</string>
+    <string name="telefono_contacto">Teléfono...</string>
+    <string name="boton_modificar_contacto">MODIFICAR CONTACTO</string>
+    <string name="nombre_contacto_vista">Nombre: </string>
+    <string name="direccion_contacto_vista"> Dirección: </string>
+    <string name="correo_contacto_vista"> Correo: </string>
+    <string name="telefono_contacto_vista"> Teléfono: </string>
+    <string name="menu_nuevo_contacto">Nuevo Contacto</string>
+    <string name="boton_guardar_contacto_existente">MODIFICAR</string>
+    <string name="boton_borrar_contacto_existente">BORRAR</string>
+    <string name="boton_cancelar_contacto_existente">CANCELAR</string>
+    <string name="boton_llamar">LLAMAR</string>
+    <string name="menu_salir">Cerrar sesión</string>
+    <string name="estilo">ESTILO</string>
+
+
+</resources>

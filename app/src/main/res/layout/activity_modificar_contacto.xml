@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/SCREEN"
+    tools:context=".ModificarContacto">
+
+    <Button
+        android:id="@+id/boton_llamar"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="161dp"
+        android:backgroundTint="@color/boton_llamar"
+        android:text="@string/boton_llamar"
+        style="@style/BUTTON"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/boton_cancelar_contacto_existente" />
+
+    <EditText
+        android:id="@+id/nombreContactoExistente"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="171dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/nombre_contacto"
+        android:inputType="textPersonName"
+        style="@style/TEXT"
+        app:layout_constraintBottom_toTopOf="@+id/direccionContactoExistente"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/direccionContactoExistente"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/direccion_contacto"
+        android:inputType="textPersonName"
+        style="@style/TEXT"
+        app:layout_constraintBottom_toTopOf="@+id/correoContactoExistente"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nombreContactoExistente" />
+
+    <EditText
+        android:id="@+id/telefonoContactoExistente"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/telefono_contacto"
+        android:inputType="phone"
+        style="@style/TEXT"
+        app:layout_constraintBottom_toTopOf="@+id/boton_guardar_contacto_existente"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/correoContactoExistente" />
+
+    <Button
+        android:id="@+id/boton_guardar_contacto_existente"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        style="@style/BUTTON"
+        android:text="@string/boton_guardar_contacto_existente"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/boton_borrar_contacto_existente"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/telefonoContactoExistente" />
+
+    <Button
+        android:id="@+id/boton_borrar_contacto_existente"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:backgroundTint="@color/boton_cancelar"
+        android:text="@string/boton_borrar_contacto_existente"
+        style="@style/BUTTON"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/boton_cancelar_contacto_existente"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/boton_guardar_contacto_existente" />
+
+    <Button
+        android:id="@+id/boton_cancelar_contacto_existente"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        style="@style/BUTTON2"
+        android:text="@string/boton_cancelar_contacto_existente"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/boton_llamar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/boton_borrar_contacto_existente" />
+
+    <EditText
+        android:id="@+id/correoContactoExistente"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/correo_contacto"
+        android:inputType="textEmailAddress"
+        style="@style/TEXT"
+        app:layout_constraintBottom_toTopOf="@+id/telefonoContactoExistente"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/direccionContactoExistente" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

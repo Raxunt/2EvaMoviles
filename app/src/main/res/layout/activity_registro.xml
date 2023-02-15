@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/SCREEN"
+    tools:context=".Registro">
+
+    <TextView
+        android:id="@+id/titulo_registro"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="164dp"
+        android:text="@string/titulo_registro"
+        android:textAlignment="center"
+        style="@style/TEXT"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/nombre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/correoNuevo"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="7dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/correo"
+        android:inputType="textEmailAddress"
+        android:minHeight="50dp"
+        style="@style/TEXT"
+        app:layout_constraintBottom_toTopOf="@+id/passwordNuevo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nombre"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/boton_registrar"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        style="@style/BUTTON"
+        android:text="@string/boton_registrar"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/boton_cancelar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordNuevo" />
+
+    <Button
+        android:id="@+id/boton_cancelar"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="254dp"
+        style="@style/BUTTON2"
+        android:text="@string/boton_cancelar"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/boton_registrar" />
+
+    <EditText
+        android:id="@+id/passwordNuevo"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        style="@style/TEXT"
+        app:layout_constraintBottom_toTopOf="@+id/boton_registrar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/correoNuevo"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/nombre"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/nombre"
+        android:inputType="textPersonName"
+        style="@style/TEXT"
+        app:layout_constraintBottom_toTopOf="@+id/correoNuevo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titulo_registro" />
+</androidx.constraintlayout.widget.ConstraintLayout>

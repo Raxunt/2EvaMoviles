@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/SCREEN"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NuevoContacto">
+
+    <EditText
+        android:id="@+id/nombreContacto"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="193dp"
+        android:ems="10"
+        android:hint="@string/nombre_contacto"
+        android:inputType="textPersonName"
+        style="@style/TEXT"
+        app:layout_constraintBottom_toTopOf="@+id/direccionContacto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/correoContacto"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:hint="@string/correo_contacto"
+        android:inputType="textEmailAddress"
+        style="@style/TEXT"
+        app:layout_constraintBottom_toTopOf="@+id/telefonoContacto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/direccionContacto"
+        android:autofillHints="" />
+
+    <Button
+        android:id="@+id/boton_guardar_contacto"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="288dp"
+        style="@style/BUTTON"
+        android:text="@string/boton_guardar_contacto"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/telefonoContacto" />
+
+    <EditText
+        android:id="@+id/telefonoContacto"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:hint="@string/telefono_contacto"
+        android:inputType="phone"
+        style="@style/TEXT"
+        app:layout_constraintBottom_toTopOf="@+id/boton_guardar_contacto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/correoContacto"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/direccionContacto"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:hint="@string/direccion_contacto"
+        android:inputType="textPersonName"
+        style="@style/TEXT"
+        app:layout_constraintBottom_toTopOf="@+id/correoContacto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nombreContacto"
+        android:autofillHints="" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
