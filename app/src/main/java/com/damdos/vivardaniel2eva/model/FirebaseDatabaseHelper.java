@@ -41,7 +41,7 @@ public class FirebaseDatabaseHelper {
 
     /**
      *  Recupera la lista de contactos y los muestra en el RecyclerView.
-     * @param dataStatus Carga los datos almacenados en la BD y los introduce en la lista RecyclerView.
+     * @param dataStatus interfaz para añadir, modificar y eliminar datos.
      */
     public void listaContactos(final DataStatus dataStatus){
         databaseReference.addValueEventListener(new ValueEventListener() {
@@ -67,7 +67,7 @@ public class FirebaseDatabaseHelper {
     /**
      * Método que nos almacena en la BD un contacto nuevo.
      * @param contacto Recoge a un contacto nuevo con todos sus atributos.
-     * @param dataStatus apunta a la base de datos donde se almacenan los contactos.
+     * @param dataStatus interfaz para añadir, modificar y eliminar datos.
      */
     public void agregarContacto(Contacto contacto, final DataStatus dataStatus){
         String clave = databaseReference.push().getKey();
@@ -83,7 +83,7 @@ public class FirebaseDatabaseHelper {
      * Actualiza a un contacto ya creado.
      * @param clave recoge el identificador del usuario existente por medio de un string.
      * @param contacto recoge la clase usuario.
-     * @param dataStatus apunta a la base de datos donde se almacenan los contactos.
+     * @param dataStatus interfaz para añadir, modificar y eliminar datos.
      */
     public void modificarContacto(String clave, Contacto contacto, final DataStatus dataStatus){
         databaseReference.child(clave).setValue(contacto).addOnSuccessListener(new OnSuccessListener<Void>() {
@@ -98,7 +98,7 @@ public class FirebaseDatabaseHelper {
     /**
      *  Borra a un contacto de la base de datos.
      * @param clave recoge el identificador del usuario existente por medio de un string.
-     * @param dataStatus apunta a la base de datos donde se almacenan los contactos.
+     * @param dataStatus interfaz para añadir, modificar y eliminar datos.
      */
     public void borrarContacto(String clave, final DataStatus dataStatus){
         databaseReference.child(clave).setValue(null).addOnSuccessListener(new OnSuccessListener<Void>() {

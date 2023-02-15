@@ -1,29 +1,15 @@
 package com.damdos.vivardaniel2eva;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import com.damdos.vivardaniel2eva.model.Contacto;
 import com.damdos.vivardaniel2eva.model.FirebaseDatabaseHelper;
-import com.damdos.vivardaniel2eva.model.Usuario;
 import com.damdos.vivardaniel2eva.model.Validaciones;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.FirebaseFirestore;
-
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class NuevoContacto extends AppCompatActivity {
     Button boton_guardar;

@@ -9,11 +9,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import com.damdos.vivardaniel2eva.model.Contacto;
 import com.damdos.vivardaniel2eva.model.FirebaseDatabaseHelper;
 import com.damdos.vivardaniel2eva.model.Validaciones;
-
 import java.util.List;
 
 public class ModificarContacto extends AppCompatActivity {
