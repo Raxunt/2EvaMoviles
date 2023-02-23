@@ -43,7 +43,7 @@ public class RecyclerViewConfiguracion {
 
 
     class ContactoItemView extends RecyclerView.ViewHolder{
-        private TextView nombre, direccion, correo, telefono;
+        private TextView nombre, direccion, correo, telefono, alias;
         private String clave;
 
         /**
@@ -52,6 +52,7 @@ public class RecyclerViewConfiguracion {
          */
         public ContactoItemView(ViewGroup parent){
             super(LayoutInflater.from(context).inflate(R.layout.activity_vista_contacto, parent, false));
+            alias = itemView.findViewById(R.id.alias_contacto);
             nombre = itemView.findViewById(R.id.nombre_contacto);
             direccion = itemView.findViewById(R.id.direccion_contacto);
             correo = itemView.findViewById(R.id.correo_contacto);
@@ -63,6 +64,7 @@ public class RecyclerViewConfiguracion {
                     if(usuario!=null){
                         Intent intent = new Intent(context, ModificarContacto.class);
                         intent.putExtra("clave", clave);
+                        intent.putExtra("alias", alias.getText().toString());
                         intent.putExtra("nombre", nombre.getText().toString());
                         intent.putExtra("direccion", direccion.getText().toString());
                         intent.putExtra("correo", correo.getText().toString());
@@ -82,6 +84,7 @@ public class RecyclerViewConfiguracion {
          * @param clave recoge un string que será la clave de cada contacto.
          */
         public void union(Contacto contacto, String clave){
+            alias.setText(contacto.getAlias());
             nombre.setText(contacto.getNombre());
             direccion.setText(contacto.getDireccion());
             correo.setText(contacto.getCorreo());

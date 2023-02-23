@@ -8,19 +8,35 @@
     tools:context=".NuevoContacto">
 
     <EditText
-        android:id="@+id/nombreContacto"
+        android:id="@+id/aliasContacto"
+        style="@style/TEXT"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:layout_marginTop="193dp"
+        android:layout_marginTop="143dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/alias_contacto"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/nombreContacto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/nombreContacto"
+        style="@style/TEXT"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/nombre_contacto"
         android:inputType="textPersonName"
-        style="@style/TEXT"
         app:layout_constraintBottom_toTopOf="@+id/direccionContacto"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/aliasContacto" />
 
     <EditText
         android:id="@+id/correoContacto"

@@ -29,6 +29,13 @@
     <string name="boton_llamar">LLAMAR</string>
     <string name="menu_salir">Cerrar sesión</string>
     <string name="estilo">ESTILO</string>
+    <string name="alias_contacto">Alias...</string>
+    <string name="alias_contacto_vista">Alias: </string>
+    <string name="menu_notas">Notas</string>
+    <string name="boton_cancelar_nota">CANCELAR</string>
+    <string name="boton_guardar_nota">GUARDAR</string>
+    <string name="titulo_nota">Titulo...</string>
+    <string name="contenido_nota">Contenido...</string>
 
 
 </resources>

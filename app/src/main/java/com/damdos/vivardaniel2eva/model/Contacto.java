@@ -1,6 +1,7 @@
 package com.damdos.vivardaniel2eva.model;
 
 public class Contacto {
+    private String alias;
     private String nombre;
     private String direccion;
     private String correo;
@@ -10,11 +11,20 @@ public class Contacto {
 
     }
 
-    public Contacto(String nombre, String direccion, String correo, String telefono) {
+    public Contacto(String alias, String nombre, String direccion, String correo, String telefono) {
+        this.alias = alias;
         this.nombre = nombre;
         this.direccion = direccion;
         this.correo = correo;
         this.telefono = telefono;
+    }
+
+    public String getAlias() {
+        return alias;
+    }
+
+    public void setAlias(String alias) {
+        this.alias = alias;
     }
 
     public String getNombre() {

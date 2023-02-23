@@ -13,14 +13,14 @@ import java.util.List;
 
 public class NuevoContacto extends AppCompatActivity {
     Button boton_guardar;
-    EditText nombre, direccion, correo, telefono;
+    EditText nombre, direccion, correo, telefono, alias;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nuevo_contacto);
         this.setTitle("Nuevo Contacto");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
+        alias = findViewById(R.id.aliasContacto);
         nombre = findViewById(R.id.nombreContacto);
         direccion = findViewById(R.id.direccionContacto);
         correo = findViewById(R.id.correoContacto);
@@ -29,6 +29,7 @@ public class NuevoContacto extends AppCompatActivity {
         boton_guardar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String aliasContacto = alias.getText().toString().trim();
                 String nombreContacto = nombre.getText().toString().trim();
                 String direccionContacto = direccion.getText().toString().trim();
                 String correoContancto = correo.getText().toString().trim();
@@ -46,7 +47,7 @@ public class NuevoContacto extends AppCompatActivity {
                     }else if (!Validaciones.validarTelefono(telefonoContacto)){
                         telefono.setError("Teléfono no válido");
                     }else{
-                        nuevoContacto(nombreContacto,direccionContacto,correoContancto,telefonoContacto);
+                        nuevoContacto(aliasContacto, nombreContacto,direccionContacto,correoContancto,telefonoContacto);
                     }
                 }
 
@@ -61,8 +62,9 @@ public class NuevoContacto extends AppCompatActivity {
      * @param correoContancto recoge un String que se asignará al correo del contacto.
      * @param telefonoContacto recoge un String que se asignará al teléfono del contacto.
      */
-    private void nuevoContacto(String nombreContacto, String direccionContacto, String correoContancto, String telefonoContacto) {
+    private void nuevoContacto(String aliasContacto,String nombreContacto, String direccionContacto, String correoContancto, String telefonoContacto) {
         Contacto contacto = new Contacto();
+        contacto.setAlias(aliasContacto);
         contacto.setNombre(nombreContacto);
         contacto.setDireccion(direccionContacto);
         contacto.setCorreo(correoContancto);

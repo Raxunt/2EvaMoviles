@@ -25,6 +25,13 @@
                 android:text="@string/nombre_contacto_vista"
                 android:textSize="20sp"
                 android:textStyle="bold" />
+            <TextView
+                android:id="@+id/alias_contacto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/alias_contacto_vista"
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
             <LinearLayout
                 android:layout_width="match_parent"

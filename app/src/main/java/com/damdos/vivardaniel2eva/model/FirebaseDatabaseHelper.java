@@ -79,6 +79,26 @@ public class FirebaseDatabaseHelper {
         });
     }
 
+    public void agregarNota(Nota nota, final DataStatus dataStatus){
+        String clave = databaseReference.push().getKey();
+        databaseReference.child(clave).setValue(nota).addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void unused) {
+                dataStatus.DataIsInserted();
+            }
+        });
+    }
+
+    public void modificarNota(String clave, Nota nota, final DataStatus dataStatus){
+        databaseReference.child(clave).setValue(nota).addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void unused) {
+                dataStatus.DataIsUpdated();
+            }
+        });
+
+    }
+
     /**
      * Actualiza a un contacto ya creado.
      * @param clave recoge el identificador del usuario existente por medio de un string.

@@ -80,6 +80,9 @@ public class Agenda extends AppCompatActivity {
             case R.id.nuevoContactoMenu:
                 startActivity(new Intent(this, NuevoContacto.class));
                 return true;
+            case R.id.notas:
+                startActivity(new Intent(this, Nota.class));
+                return true;
             case R.id.cerrar_sesion:
                 firebaseAuth.signOut();
                 invalidateOptionsMenu();

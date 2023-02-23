@@ -16,26 +16,30 @@ import java.util.List;
 
 public class ModificarContacto extends AppCompatActivity {
      Button boton_modificar, boton_borrar, boton_cancelar, boton_llamar;
-     EditText nombre, direccion, correo, telefono;
+     EditText nombre, direccion, correo, telefono, alias;
 
     private String clave;
     private String nom;
     private String direc;
     private String corr;
     private String telf;
+    private String ali;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_modificar_contacto);
         this.setTitle("Modificar Contacto");
+
         clave = getIntent().getStringExtra("clave");
+        ali = getIntent().getStringExtra("alias");
         nom = getIntent().getStringExtra("nombre");
         direc = getIntent().getStringExtra("direccion");
         corr = getIntent().getStringExtra("correo");
         telf = getIntent().getStringExtra("telefono");
 
-
+        alias = findViewById(R.id.aliasContactoExistente);
+        alias.setText(ali);
         nombre = findViewById(R.id.nombreContactoExistente);
         nombre.setText(nom);
         direccion = findViewById(R.id.direccionContactoExistente);
@@ -53,6 +57,7 @@ public class ModificarContacto extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Contacto contacto = new Contacto();
+                contacto.setAlias(alias.getText().toString());
                 contacto.setNombre(nombre.getText().toString());
                 contacto.setDireccion(direccion.getText().toString());
                 contacto.setCorreo(correo.getText().toString());

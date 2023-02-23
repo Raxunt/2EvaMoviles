@@ -7,6 +7,21 @@
     style="@style/SCREEN"
     tools:context=".ModificarContacto">
 
+    <EditText
+        android:id="@+id/aliasContactoExistente"
+        style="@style/TEXT"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="121dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/alias_contacto"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
         android:id="@+id/boton_llamar"
         android:layout_width="300dp"
@@ -24,19 +39,18 @@
 
     <EditText
         android:id="@+id/nombreContactoExistente"
+        style="@style/TEXT"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:layout_marginTop="171dp"
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/nombre_contacto"
         android:inputType="textPersonName"
-        style="@style/TEXT"
         app:layout_constraintBottom_toTopOf="@+id/direccionContactoExistente"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/aliasContactoExistente" />
 
     <EditText
         android:id="@+id/direccionContactoExistente"
